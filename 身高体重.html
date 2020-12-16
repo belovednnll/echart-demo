@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>7岁以下儿童身高体重测评</title>
+  <link rel="stylesheet" href="http://layui.hcwl520.com.cn/layui/css/layui.css?v=201805310202" media="all">
+  <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+
+  <style>
+    body {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="layui-container">
+    <blockquote class="layui-elem-quote layui-quote-nm"> 0-7岁儿童身高体重测评</blockquote>
+    <div class="layui-row">
+      <div class="layui-col-xs12 layui-col-md7">
+          <div class="layui-form-item">
+ 
+              <div class="layui-inline">
+                <label class="layui-form-label">身高</label>
+                <div class="layui-input-inline" style="width: 80px;">
+                  <input type="text" id="statureId" lay-verify="number"  autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">cm</div>
+                <div class="layui-form-mid">体重</div>
+                <div class="layui-input-inline" style="width: 100px;">
+                  <input type="text" id="weightId" lay-verify="number"  autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">kg</div>
+                <div class="layui-form-mid">出生日期</div>
+                <div class="layui-input-inline" style="width: 160px;">
+                    <input type="text" id="birthdayId" autocomplete="off" class="layui-input">
+                  </div>
+              </div>
+               
+            </div>
+      </div>
+      <div class="layui-col-xs9 layui-col-md3">
+        <div class="layui-form">
+          <div class="layui-form-item">
+            <label class="layui-form-label">性别</label>
+            <div class="layui-input-block">
+              <input type="radio" name="sex" value="0" lay-filter="sexRadio" title="男" checked>
+              <input type="radio" name="sex" value="1"  lay-filter="sexRadio"  title="女">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-xs3 layui-col-md2">
+        <button class="layui-btn layui-btn-radius layui-btn-normal" onclick="changeChart()">查看结果</button>
+      </div>
+    </div>
+  </div>
+  <div class="layui-row">
+      <div class="layui-col-xs12 layui-col-md12">
+          <div id="statureMain" style="height:700px;"></div>
+      </div>
+      <div class="layui-col-xs12 layui-col-md12">
+          <div id="weightMain" style="height:700px;"></div>
+        </div>
+  </div>
+  <script src="http://layui.hcwl520.com.cn/layui/layui.js?v=201805310202"></script>
+  <script src="./stature.js"></script>
+</body>
+
+</html>
